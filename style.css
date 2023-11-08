@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+.nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 1rem;
+}
+.leftcontent {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-left: 4rem;
+}
+.leftcontent span{
+    color: darkorchid;
+}
+.rightcontent{
+    margin-right: 4rem;
+}
+.rightcontent ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+}
+.rightcontent ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.underline{
+    display: flex;
+    position: relative;
+}
+.rightcontent ul li .lineleft{
+    height: 1.4px;
+    background-color:darkorchid ;
+    transition: 0.3s ease;
+    position:absolute;
+    top:0;
+    right:0; 
+}
+.rightcontent ul li .lineright{
+    height: 1.4px;
+    background-color:darkorchid ;
+    transition: 0.3s ease;
+}
+.rightcontent ul li:hover .lineleft{
+   animation: underline 0.5s forwards;
+}
+.rightcontent ul li:hover .lineright{
+   animation: underline 0.5s forwards;
+}
+.rightcontent ul li:hover{
+    color: rgb(194, 127, 227);
+    transform: scale(1.05);
+}
+@keyframes underline {
+    from{
+        width: 0rem; 
+    }
+    to{
+        width: 3.2rem; 
+    }
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+}
+.page1{
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.page1 .circle{
+    position: absolute;
+    top: 0%;
+    left: 4%;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: rgb(113, 227, 227);
+    opacity: 0.1;
+}
+.page1 .content{
+    font-size: 3rem;
+    font-weight: 400;
+}
+.page1 .content>p span{
+    color: rgb(118, 220, 220);
+}
+#element{
+    color: darkorchid;
+    font-weight: 600;
+}
+.page1 .img-container img{
+    height: 25rem;
+    width: 25rem;
+}
+.cv-button{
+    margin-left: 10rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.cv-button .bg-effect{
+    position: absolute;
+    top: 2.6%;
+    left: 0.4%;
+    height: 2.8rem;
+    border-radius: 8px;
+    z-index: -1;
+    background-color: rgb(190, 111, 230);
+    transition: all 0.3s ease;
+}
+.cv-button button{
+    cursor: pointer;
+    font-size: 16px;
+    border: 0.5px solid #222222;
+    padding: 13px 33px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    transition: all 0.3s ease;
+}
+.cv-button:hover .bg-effect{
+    animation: bgeffect 0.4s forwards;
+} 
+.cv-button button i{
+    margin-left: 0.3rem;
+    transition: all 0.3s ease;
+}
+.cv-button:hover button>i{
+    animation: download 0.4s forwards;
+}
+@keyframes bgeffect {
+    from{
+        width: 0rem;
+    }
+    to{
+        width: 11.8rem;
+    }
+}
+@keyframes download {
+    from{
+        transform: translateY(-20px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+.page2-heading{
+    margin: 6rem 0;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+.levels{
+    margin: 1rem 0rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.level_circle{
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.levels p{
+    display: inline-block;
+    cursor: pointer;
+}
+.basic{
+    background-color: rgb(52, 52, 211);
+}
+.Intermediate{
+    background-color:greenyellow;
+}
+.Advanced{
+    background-color: orange;
+}
+.page2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+.skill-container{
+  margin: 2rem 0;
+}
+.skill-container .skill-name{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.progress-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.progress-bar{
+    height: 0.7rem;
+    width: 20rem;
+    border: 1px solid black;
+    position: relative;
+}
+.progress-bar span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.html{
+    width: 90%;
+    background-color: orange;
+}
+.css{
+    width: 80%;
+    background-color: orange;
+}
+.javascript{
+    width: 65%;
+    background-color: greenyellow;
+}
+.Clanguage{
+    width: 75%;
+    background-color: greenyellow;
+}
+.react{
+    width: 60%;
+    background-color: rgb(52, 52, 211);
+}
+.nodejs{
+    width: 60%;
+    background-color:rgb(52, 52, 211);
+}
+.footer{
+    margin-top: 2rem;;
+    background-color: black;
+    height: 50vh;
+}
+.footer .main-content {
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13rem;
+}
+.footer .main-content  .left-content {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.footer .main-content  .left-content span{
+    color: #e0284c;
+}
+.contact-button{
+    margin: 2.5rem 0;
+}
+.contact-button button{
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    border: 0.5px solid #e0284c;
+    padding: 13px 30px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+.contact-button button:hover{
+    background-color:#e0284c;
+    border: 1px solid white;
+}
+.right-content {
+    color: white;
+}
+.right-content h3{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.right-content span{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #cc3;
+    margin-bottom: 1rem;
+}
+.footer-icons {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.outer-container{
+    cursor: pointer;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.791);
+    transition:all  0.3s ease;
+}
+.linkedin:hover{
+    background-color: blue;
+}
+.github:hover{
+    background-color: black;
+}
+.instagram:hover{
+    background:linear-gradient( #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+}
+.whatsapp:hover{
+   background-color: green;
+}
+.copyright{
+    text-align: center;
+    margin-top: 1rem;
+}
+.copyright p{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+/* contact css */
+.contact-heading{
+    text-align: center;
+    margin: 3rem 0;
+}
+.contact-heading h3{
+    font-size: 3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.contact-heading h3 span{
+    color: darkorchid;
+}
+.contact-content-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: centerl
+}
+.contact-form{
+   margin-left: 14rem;
+}
+.contact-form .form-input{
+    margin: 2rem 0;
+}
+.contact-form .form-input input,textarea{
+    width: 40rem;
+    border-radius: 1.9px;
+    padding: 0.8rem 1.1rem;
+    border: 1px solid black;
+    outline: none;
+    transition: all 0.2s ease;
+}
+.contact-form .form-input textarea:focus,
+.contact-form .form-input input:focus{
+    border: 2px solid black;
+}
+.buttons-container{
+    position: relative;
+}
+.contact-button2 button{
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 25%;
+    font-size: 20px;
+    background-color: #e0284c;
+}
+.contact-button2 button:hover{
+    background-color: #a41a36;;
+}
+.cv-button2 button{
+    position: absolute;
+    top: 0;
+    left: 40%;
+    background-color: rgb(178, 96, 219);
+}
+.cv-button2 button:hover{
+    background-color: rgb(125, 45, 165);
+}
+.contact-icon-container{
+    margin-top: 9rem;
+    margin-right: 6rem;
+}
+.outer-container2{
+    cursor: pointer;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: white;
+    transition:all  0.3s ease;
+}
+.outer-container2 i{
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+/* project page css */
+.project-heading{
+    text-align: center;
+    margin: 3rem 0;
+}
+.project-heading h3{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.project-heading span{
+    color: darkorchid;
+}
+.cards-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+.project-card{
+    height: 18rem;
+    width: 19rem;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.project-img{
+  height: 17rem;
+}
+.project-card img{
+    height: 16rem;
+    width: 100%;
+    transition: 0.3s ease;
+    object-fit:cover; 
+}
+.card-content{
+    color: black;
+    background:linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+    height: 4rem;
+    text-align: center;
+    transition: 0.3s ease;
+}
+.card-content h3{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2.5rem
+}
+.card-content-2{
+   background:linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 0.7rem;
+   opacity: 0;
+   transform: scale(0);
+   transition: 0.5s ease;
+}
+.card-content-2 h4{
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.project-card:hover{
+    transform: scale(1.03);
+    box-shadow: none;
+}
+.project-card:hover .card-content-2{
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(-40px);
+    height: 4.5rem;
+}
+.project-card:hover .card-content{
+    transform: translateY(-40px);
+}
+.cards-container  .project-card:hover img{
+    height: 10rem;
+    filter: grayscale(90%);
+}
+.card-content-2 i{
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.card-content-2 i:hover{
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* css for about page */
+.main-container{
+    height: 210vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    margin: 4rem 2rem;
+    position: relative;
+}
+.main-container .about-content{
+    margin-top: -21rem;
+}
+.main-container .about-content h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.main-container .about-content span{
+    color: darkorchid;
+}
+.main-container .about-content p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.about-img img{
+    height: 35rem;
+    width: 35rem;
+}
+.main-container .about-content h3,ul,li{
+    margin-left: 1rem;
+}
+.main-container .about-content h3{
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+}
+.main-container .about-content li{
+    font-size: 1.3rem;
+}
+.main-container .about-img{
+    position: sticky;
+    bottom:10%;
+    right: 1rem;
+}
+.contact-icon-container{
+    position: relative;
+}
